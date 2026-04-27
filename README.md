@@ -1,20 +1,35 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# 🚀 Neomine Platform | منصة نيوماين التعليمية
 
-# Run and deploy your AI Studio app
+نيوماين هي منصة تعليمية متكاملة مصممة لإدارة العملية التعليمية التقنية، تركز على تمكين الطلاب وإدارات المدارس من خلال تحليل البيانات وتتبع الإنجاز الفعلي. تم تطوير هذا المشروع كنموذج رائد لمنصات التعلم الذكي.
 
-This contains everything you need to run your app locally.
+## ✨ المميزات الرئيسية
 
-View your app in AI Studio: https://ai.studio/apps/b87b2840-13b2-4955-b28c-e54cb4930d3e
+### 🎓 واجهة الطالب (Student Portal)
+- **لوحة التعلم اليومي:** واجهة مركزية تركز على المهام والدروس اليومية.
+- **تتبع الإنجاز:** نظام بصري متطور يوضح حالة كل درس (مكتمل، قيد الدراسة، بانتظارك).
+- **نظام التحفيز (Gamification):** تتبع الـ "Streak" اليومي ولوحات متصدرين تفاعلية.
+- **ملف شخصي متكامل:** يعرض إنجازات الطالب، ترتيبه، والشهادات المحققة.
 
-## Run Locally
+### 🏫 واجهة إدارة المدرسة (School Administration)
+- **إدارة المجمعات التعليمية:** نظام موحد لإدارة عدة مدارس بترميز رقمي.
+- **هيكلة المسارات:** تقسيم هرمي متطور (بنين/بنات) يندرج تحته مسارات (متوسط/ثانوي) بفرعيهما الدولي والعام.
+- **لوحة الإحصائيات:** داشبورد شامل يعرض البيانات التسويقية والمالية (ساعات التدريب، أسطر الكود).
 
-**Prerequisites:**  Node.js
+### 💼 واجهة الموظفين (Staff Portal)
+- **الإدارة الشاملة:** مراقبة أداء جميع المدارس المشتركة وحالتها التعاقدية.
+- **تقارير الذكاء الاصطناعي:** توليد تقارير أسبوعية آلية عن أداء النظام.
 
+## 🛠️ التقنيات المستخدمة (Tech Stack)
+- **Frontend:** React.js, TypeScript
+- **Styling:** Tailwind CSS (Dark Mode & White Theme support)
+- **Animations:** Framer Motion
+- **Charts:** Recharts
+- **State Management:** React Hooks
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## 🚀 كيفية التشغيل
+1. قم بتحميل المستودع: `git clone [repository-url]`
+2. تثبيت المكتبات: `npm install`
+3. تشغيل المشروع: `npm run dev`
+
+---
+تطوير: **مودة الحارثي** وفريق عمل نيوماين.
