@@ -301,7 +301,7 @@ export default function StudentDashboard({ activeTab, isWhiteTheme = false }: { 
     { id: 1, text: 'أنت مرشح لمسابقة البرمجة الإقليمية في مايو — استعد!', type: 'award', time: 'منذ ساعتين' },
     { id: 2, text: 'أكمل مشروع تصنيف الصور — 70% منجز ويحتاج 30 دقيقة فقط', type: 'project', time: 'منذ ٥ ساعات' },
     { id: 3, text: 'تم إضافة مادة جديدة في مسار الذكاء الاصطناعي', type: 'system', time: 'أمس' },
-  ] || []);
+  ]);
 
   const TrackContentView = ({ track, onClose }: { track: any, onClose: () => void }) => {
     if (!track) return null;
