@@ -293,18 +293,19 @@ const performanceData = [
 ];
 
 export default function StudentDashboard({ activeTab, isWhiteTheme = false }: { activeTab: string, isWhiteTheme?: boolean }) {
-  const currentStudent = allStudentsData.find(s => s.name === 'عبدالله الشمري') || allStudentsData[0];
-  const studentSchool = schoolsList.find(sch => sch.id === currentStudent.schoolId);
+  const currentStudent = allStudentsData?.find(s => s.name === 'عبدالله الشمري') || allStudentsData?.[0] || { name: 'طالب نيوماين', points: 0, mastery: 78, schoolId: 1 };
+  const studentSchool = schoolsList?.find(sch => sch.id === currentStudent?.schoolId) || schoolsList?.[0] || { name: 'مدرسة نيوماين العالمية' };
   const [showNotifications, setShowNotifications] = useState(false);
   const [selectedTrack, setSelectedTrack] = useState<any>(null);
   const [notifications] = useState([
     { id: 1, text: 'أنت مرشح لمسابقة البرمجة الإقليمية في مايو — استعد!', type: 'award', time: 'منذ ساعتين' },
     { id: 2, text: 'أكمل مشروع تصنيف الصور — 70% منجز ويحتاج 30 دقيقة فقط', type: 'project', time: 'منذ ٥ ساعات' },
     { id: 3, text: 'تم إضافة مادة جديدة في مسار الذكاء الاصطناعي', type: 'system', time: 'أمس' },
-  ]);
+  ] || []);
 
   const TrackContentView = ({ track, onClose }: { track: any, onClose: () => void }) => {
-    const lessons = trackLessonsMap[track.id] || [];
+    if (!track) return null;
+    const lessons = trackLessonsMap[track?.id] || [];
     const modules = [...new Set(lessons.map(l => l.module))];
     const [activeLesson, setActiveLesson] = useState(lessons.find(l => !l.completed) || lessons[0]);
 
@@ -1087,7 +1088,15 @@ export default function StudentDashboard({ activeTab, isWhiteTheme = false }: { 
           </div>
         );
       default:
-        return null;
+        return (
+          <div className="p-20 text-center animate-in fade-in">
+             <div className="w-20 h-20 bg-gray-50 rounded-full flex items-center justify-center mx-auto mb-6">
+                <AlertTriangle className="w-10 h-10 text-gray-300" />
+             </div>
+             <h3 className="text-xl font-black text-[#0A1128] mb-2">المحتوى بانتظار التفعيل</h3>
+             <p className="text-gray-400 font-bold">يرجى الانتقال للوحة التعلم اليومي لمتابعة دروسك.</p>
+          </div>
+        );
     }
   };
 

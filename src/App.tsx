@@ -20,9 +20,9 @@ import StudentApp from './components/StudentApp';
 import GlobalExcellenceHub from './components/GlobalExcellenceHub';
 
 export default function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [userRole, setUserRole] = useState<'admin' | 'student' | 'staff' | null>(null);
-  const [activeTab, setActiveTab] = useState('dashboard');
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const [userRole, setUserRole] = useState<'admin' | 'student' | 'staff' | null>('student');
+  const [activeTab, setActiveTab] = useState('daily_learning');
   const [selectedStudent, setSelectedStudent] = useState<any>(null);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
