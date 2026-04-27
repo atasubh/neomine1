@@ -1,0 +1,73 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Inter:wght@400;600&display=swap');
+
+@theme {
+  --font-tajawal: "Almarai", "Inter", sans-serif;
+  --color-neomine-teal: #00C9B1;
+  --color-neomine-blue: #00F0FF;
+  --color-neomine-dark: #020617;
+  --color-neomine-black: #020617;
+}
+
+:root {
+  font-family: var(--font-tajawal);
+}
+
+body {
+  background-color: var(--color-neomine-black);
+  color: white;
+  margin: 0;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+*::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hero Glow effect */
+.hero-glow {
+  background: radial-gradient(circle at center, rgba(30, 64, 175, 0.25) 0%, transparent 80%);
+}
+
+.side-glow {
+  background: radial-gradient(circle at center, rgba(30, 64, 175, 0.3) 0%, transparent 70%);
+}
+
+@keyframes float {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-15px) rotate(1deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Glass & Ghost effects */
+.glass-card {
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.frosted-btn {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(0, 201, 177, 0.3);
+}
+
+/* RTL Support for the whole app */
+[dir="rtl"] {
+  text-align: right;
+}
+
+/* Global Button Hover Effects */
+button {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
